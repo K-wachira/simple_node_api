@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 fs = require('fs');
 
 
-var path = 'result/post.txt' //path to the text file to store the posts 
+var path = 'result/posts.txt' //path to the text file to store the posts 
 
 fetch('http://jsonplaceholder.typicode.com/posts') // fetch the posts using nodes fetch 
     .then(res => res.json())  // the api responds with a json
@@ -20,7 +20,7 @@ fetch('http://jsonplaceholder.typicode.com/posts') // fetch the posts using node
 
 
 
-
+// function to append the api results
 function appendToFile(path, data) {
     const json = JSON.stringify(data, null, 2); // convert the map to a string 
 
